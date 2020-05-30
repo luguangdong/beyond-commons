@@ -1,5 +1,8 @@
 package com.beyond.commons.response;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * <p>
  * Description: API 统一返回状态码
@@ -156,6 +159,66 @@ public enum ResponseCode {
     public String message() {
         return this.message;
     }
+
+    public Integer getCode() {
+        return code;
+    }
+
+    public void setCode(Integer code) {
+        this.code = code;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
+    private static Map<Integer,ResponseCode> codeMaps = new HashMap<Integer,ResponseCode>();
+    static{
+        for(ResponseCode re : ResponseCode.values()){
+            codeMaps.put(re.code(), re);
+        }
+    }
+    public static ResponseCode get(final Integer code) {
+        ResponseCode re = codeMaps.get(code);
+        if (re == null) {
+            System.out.println(String.format("%s没有对应值,code=%s", ResponseCode.class.getName(), code));
+        }
+        return re;
+    }
+
+    private static Map<String,ResponseCode> messageMaps = new HashMap<String,ResponseCode>();
+    static{
+        for(ResponseCode re : ResponseCode.values()){
+            messageMaps.put(re.message(), re);
+        }
+    }
+    public static ResponseCode get(final String message) {
+        ResponseCode re = messageMaps.get(message);
+        if (re == null) {
+            System.out.println(String.format("%s没有对应值,message=%s", ResponseCode.class.getName(), message));
+        }
+        return re;
+    }
+    public static String getMessageByCode(Integer code) {
+        if(get(code)==null){
+            return null;
+        }else{
+            return get(code).message;
+        }
+    }
+
+    public static Integer getCodeByMessage(String message) {
+        if(get(message)==null){
+            return null;
+        }else{
+            return get(message).code();
+        }
+    }
+
 
     public static String getMessage(String name) {
         for (ResponseCode item : ResponseCode.values()) {
