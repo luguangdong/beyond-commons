@@ -9,6 +9,7 @@
     </parent>
 
     <artifactId>beyond-commons</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
     <packaging>jar</packaging>
     <url>http://www.beyond.com</url>
     <inceptionYear>2020-Now</inceptionYear>
