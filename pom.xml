@@ -9,16 +9,16 @@
     </parent>
 
     <artifactId>beyond-commons</artifactId>
-    <version>1.0.1-SNAPSHOT</version>
+    <version>1.0.0-SNAPSHOT</version>
     <packaging>jar</packaging>
     <url>http://www.beyond.com</url>
     <inceptionYear>2020-Now</inceptionYear>
     <description>通用依赖-Commons</description>
 
     <scm>
-        <connection>scm:git:http://192.168.137.101:8080/beyond/beyond-commons.git</connection>
-        <developerConnection>scm:git:http://192.168.137.101:8080/beyond/beyond-commons.git</developerConnection>
-        <url>http://192.168.137.101:8080/beyond/beyond-commons</url>
+        <connection>scm:git:http://gitlab.beyond.com/beyond/beyond-commons.git</connection>
+        <developerConnection>scm:git:http://gitlab.beyond.com/beyond/beyond-commons.git</developerConnection>
+        <url>http://gitlab.beyond.com/beyond/beyond-commons</url>
       <tag>HEAD</tag>
   </scm>
 
