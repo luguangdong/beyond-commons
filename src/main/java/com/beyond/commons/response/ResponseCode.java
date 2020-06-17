@@ -67,6 +67,24 @@ public enum ResponseCode {
      * 用户已存在
      */
     USER_HAS_EXISTED(20005, "用户已存在"),
+    /**
+     * 昵称不存在
+     */
+    USER_NICK_NOT_EXIST(20006, "昵称不存在"),
+    /**
+     * 昵称已存在
+     */
+    USER_NICK_HAS_EXISTED(20007, "昵称已存在"),
+    /**
+     * 邮箱不存在
+     */
+    USER_EMAIL_NOT_EXIST(20008, "邮箱不存在"),
+    /**
+     * 邮箱已存在
+     */
+    USER_EMAIL_HAS_EXISTED(20009, "邮箱已存在"),
+
+
 
     // ------------------------------------------------------- 用户错误：20001-29999 End
 
@@ -139,9 +157,16 @@ public enum ResponseCode {
     /**
      * 无访问权限
      */
-    PERMISSION_NO_ACCESS(70001, "无访问权限");
+    PERMISSION_NO_ACCESS(70001, "无访问权限"),
 
     // ------------------------------------------------------- 权限错误：70001-79999 End
+
+    /**
+     * 未知错误
+     */
+    UNKNOWN(-1, "未知错误");
+
+
 
     private Integer code;
 
